@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sit.App", "src\Sit.App\Sit.App.csproj", "{49CFEE3D-7ABB-4B0A-B430-721A945BB02D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sit.App", "src\Sit.App\Sit.App.csproj", "{49CFEE3D-7ABB-4B0A-B430-721A945BB02D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sit.Core.Abstractions", "src\Sit.Core.Abstractions\Sit.Core.Abstractions.csproj", "{68124B13-F675-4C6E-AEBB-4FEBF97ABAF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sit.Core.Abstractions", "src\Sit.Core.Abstractions\Sit.Core.Abstractions.csproj", "{68124B13-F675-4C6E-AEBB-4FEBF97ABAF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sit.Core", "src\Sit.Core\Sit.Core.csproj", "{0E83BE5B-364F-422C-A131-C468F2EA5A11}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sit.Core", "src\Sit.Core\Sit.Core.csproj", "{0E83BE5B-364F-422C-A131-C468F2EA5A11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sit.Data.Abstractions", "src\Sit.Data.Abstractions\Sit.Data.Abstractions.csproj", "{69910111-A9C7-4384-98BA-BC2F1DEE66C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sit.Data.Abstractions", "src\Sit.Data.Abstractions\Sit.Data.Abstractions.csproj", "{69910111-A9C7-4384-98BA-BC2F1DEE66C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sit.Data", "src\Sit.Data\Sit.Data.csproj", "{60C283A8-0F40-48C1-A140-B9808D9E2C70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sit.Data", "src\Sit.Data\Sit.Data.csproj", "{60C283A8-0F40-48C1-A140-B9808D9E2C70}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{096F7868-B778-42EA-88A1-2A8AD5B8C4F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

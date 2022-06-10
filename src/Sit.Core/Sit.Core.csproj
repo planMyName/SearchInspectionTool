@@ -8,6 +8,12 @@
 
   <ItemGroup>
     <PackageReference Include="Autofac" Version="6.4.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sit.Core.Abstractions\Sit.Core.Abstractions.csproj" />
+    <ProjectReference Include="..\Sit.Data.Abstractions\Sit.Data.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>

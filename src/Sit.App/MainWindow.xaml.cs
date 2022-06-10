@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
+using Sit.Core.Abstractions;
 
 namespace Sit.App
 {
@@ -20,9 +8,26 @@ namespace Sit.App
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        private readonly IDocumentInspectionService _documentInspectionService;
+        private const int MaximumResultCount = 100;
+
+        public MainWindow(IDocumentInspectionService documentInspectionService)
         {
+            _documentInspectionService = documentInspectionService;
             InitializeComponent();
+        }
+
+        private async void SubmitButton_Click(object sender, RoutedEventArgs e)
+        {
+            var inspectionRequest =
+                new InspectionRequestDetail(UrlTextbox.Text, InspectStringTextbox.Text, MaximumResultCount);
+
+            var result = await _documentInspectionService.Inspect(inspectionRequest);
+
+            if (result != null)
+            {
+                ResultTextBox.Text = "";
+            }
         }
     }
 }
