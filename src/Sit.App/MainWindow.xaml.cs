@@ -11,7 +11,8 @@ namespace Sit.App
         private readonly IDocumentInspectionService _documentInspectionService;
         private const int MaximumResultCount = 100;
 
-        public MainWindow(IDocumentInspectionService documentInspectionService)
+
+        public MainWindow(IDocumentInspectionService? documentInspectionService)
         {
             _documentInspectionService = documentInspectionService;
             InitializeComponent();
@@ -26,7 +27,7 @@ namespace Sit.App
 
             if (result != null)
             {
-                ResultTextBox.Text = "";
+                ResultTextBox.Text = result.resultCsv + " ||| " + result.snapshot;
             }
         }
     }

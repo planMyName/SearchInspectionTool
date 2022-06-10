@@ -1,7 +1,7 @@
 ﻿using Autofac;
 using Sit.Core.Abstractions;
 
-namespace Sit.Core.Installers
+namespace Sit.Core.DependencyInjection
 {
     public class HyperlinkInspectorModule : Module
     {

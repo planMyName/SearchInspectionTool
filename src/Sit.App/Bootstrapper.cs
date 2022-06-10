@@ -1,20 +1,27 @@
 ﻿using System;
+using System.Net.Http;
 using System.Reflection;
 using Autofac;
 using Autofac.Core;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Sit.App
 {
     public static class Bootstrapper
     {
-        private static ILifetimeScope _lifetimeScope;
-
+        private static ILifetimeScope? _lifetimeScope;
+        private static ServiceProvider _serviceProvider;
 
         public static void Start()
         {
             if (_lifetimeScope != null) return;
             var builder = new ContainerBuilder();
-            var assemblies = new[] { Assembly.GetExecutingAssembly() };
+            var assemblies = new[] {
+                Assembly.LoadFrom("Sit.Core.dll"),
+                Assembly.LoadFrom("Sit.Data.dll")};
+
+            _serviceProvider = new ServiceCollection().AddHttpClient().BuildServiceProvider();
+            builder.Register(c => _serviceProvider.GetService<IHttpClientFactory>()).As<IHttpClientFactory>();
 
             foreach (var assembly in assemblies)
             {
@@ -26,6 +33,7 @@ namespace Sit.App
 
         public static void Stop()
         {
+            _serviceProvider?.Dispose();
             _lifetimeScope?.Dispose();
         }
 

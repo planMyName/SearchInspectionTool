@@ -9,11 +9,11 @@
     <Grid x:Name="Main">
         <Grid>
             <Label Content="Search Url:&#xD;&#xA;" HorizontalAlignment="Left" Margin="45,61,0,0" VerticalAlignment="Top" Width="98" Height="31"/>
-            <TextBox x:Name="UrlTextbox" HorizontalAlignment="Left" Margin="185,68,0,0" TextWrapping="Wrap" Text="Place url to search for" VerticalAlignment="Top" Width="528"/>
+            <TextBox x:Name="UrlTextbox" HorizontalAlignment="Left" Margin="185,68,0,0" TextWrapping="Wrap" Text="https://www.google.com.au/search?num=100&amp;q=conveyancing+software" VerticalAlignment="Top" Width="528"/>
         </Grid>
         <Grid>
             <Label Content="Target Search String:" HorizontalAlignment="Left" Margin="45,115,0,0" VerticalAlignment="Top" Width="119" Height="27"/>
-            <TextBox x:Name="InspectStringTextbox" HorizontalAlignment="Left" Margin="183,120,0,0" TextWrapping="Wrap" Text="Place string you are interested in here" VerticalAlignment="Top" Width="530"/>
+            <TextBox x:Name="InspectStringTextbox" HorizontalAlignment="Left" Margin="183,120,0,0" TextWrapping="Wrap" Text="www.smokeball.com.au" VerticalAlignment="Top" Width="530"/>
         </Grid>
 
         <Grid>

@@ -11,3 +11,4 @@ src/*/Bin
 src/*/obj
 src/*/*/bin
 src/*/*/obj
+bin/*
