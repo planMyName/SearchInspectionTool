@@ -1,23 +1,26 @@
-﻿using Sit.Core.Document;
-using Sit.Data;
+﻿using Sit.Data;
 
-namespace Sit.Core
+namespace Sit.Core.Document;
+
+public class DocumentInspectionService : IDocumentInspectionService
 {
-    public class DocumentInspectionService : IDocumentInspectionService
+    private readonly IWebRepository _webRepository;
+    private readonly IDocumentTokenizer _documentTokenizer;
+
+    public DocumentInspectionService(IWebRepository webRepository, IDocumentTokenizer documentTokenizer)
     {
-        private readonly IWebRepository _webRepository;
-
-        public DocumentInspectionService(IWebRepository webRepository)
-        {
-            _webRepository = webRepository;
-        }
+        _webRepository = webRepository;
+        _documentTokenizer = documentTokenizer;
+    }
 
 
-        public async Task<InspectionResultDetail> Inspect(InspectionRequestDetail inspectionRequest)
-        {
-            var result = await _webRepository.GetContentFrom(inspectionRequest.TargetUrl);
+    public async Task<InspectionResultDetail> Inspect(InspectionRequestDetail inspectionRequest)
+    {
+        var result = await _webRepository.GetContentFrom(inspectionRequest.TargetUrl);
 
-            return new InspectionResultDetail("1,2,3", result.Substring(0, 200));
-        }
+        var hyperlinks = _documentTokenizer.TokenizeHyperlinks(result);
+
+
+        return new InspectionResultDetail("1,2,3", result.Substring(0, 200));
     }
 }

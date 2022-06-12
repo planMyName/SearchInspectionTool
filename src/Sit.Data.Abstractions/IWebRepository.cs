@@ -1,7 +1,6 @@
-﻿namespace Sit.Data
+﻿namespace Sit.Data;
+
+public interface IWebRepository
 {
-    public interface IWebRepository
-    {
-        public Task<string> GetContentFrom(string location);
-    }
+    public Task<string> GetContentFrom(string location);
 }

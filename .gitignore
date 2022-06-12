@@ -7,8 +7,9 @@
 .vs/
 output
 src/*/bin
-src/*/Bin
 src/*/obj
 src/*/*/bin
 src/*/*/obj
 bin/*
+tests/*/bin
+tests/*/obj

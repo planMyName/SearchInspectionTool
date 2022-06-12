@@ -1,13 +1,13 @@
 ﻿using Autofac;
 using Sit.Core.Document;
 
-namespace Sit.Core.DependencyInjection
+namespace Sit.Core.DependencyInjection;
+
+public class HyperlinkInspectorModule : Module
 {
-    public class HyperlinkInspectorModule : Module
+    protected override void Load(ContainerBuilder builder)
     {
-        protected override void Load(ContainerBuilder builder)
-        {
-            builder.RegisterType<DocumentInspectionService>().As<IDocumentInspectionService>();
-        }
+        builder.RegisterType<DocumentInspectionService>().As<IDocumentInspectionService>();
+        builder.RegisterType<DocumentTokenizer>().As<IDocumentTokenizer>();
     }
 }

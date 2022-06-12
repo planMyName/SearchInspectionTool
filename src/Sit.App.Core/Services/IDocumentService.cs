@@ -1,9 +1,8 @@
 ﻿using Sit.App.Core.Models;
 
-namespace Sit.App.Core.Services
+namespace Sit.App.Core.Services;
+
+public interface IDocumentService
 {
-    public interface IDocumentService
-    {
-        Task<InspectionResult> Inspect(InspectionRequest inspectionRequest);
-    }
+    Task<InspectionResult> Inspect(InspectionRequest inspectionRequest);
 }
