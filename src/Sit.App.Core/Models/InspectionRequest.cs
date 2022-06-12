@@ -1,6 +1,6 @@
-﻿namespace Sit.Core.Abstractions
+﻿namespace Sit.App.Core.Models
 {
-    public record InspectionRequestDetail(
+    public record InspectionRequest(
         string TargetUrl,
         string InpectionText,
         int MaxResultCount);

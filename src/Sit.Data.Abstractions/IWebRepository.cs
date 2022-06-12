@@ -1,4 +1,4 @@
-﻿namespace Sit.Data.Abstractions
+﻿namespace Sit.Data
 {
     public interface IWebRepository
     {

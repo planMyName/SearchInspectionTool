@@ -1,5 +1,7 @@
 ﻿using System.Windows;
-using Sit.Core.Abstractions;
+using Sit.App.Core.Models;
+using Sit.App.Core.Services;
+
 
 namespace Sit.App
 {
@@ -8,22 +10,22 @@ namespace Sit.App
     /// </summary>
     public partial class MainWindow : Window
     {
-        private readonly IDocumentInspectionService _documentInspectionService;
+        private readonly IDocumentService _documentService;
         private const int MaximumResultCount = 100;
 
 
-        public MainWindow(IDocumentInspectionService? documentInspectionService)
+        public MainWindow(IDocumentService documentService)
         {
-            _documentInspectionService = documentInspectionService;
+            _documentService = documentService;
             InitializeComponent();
         }
 
         private async void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
             var inspectionRequest =
-                new InspectionRequestDetail(UrlTextbox.Text, InspectStringTextbox.Text, MaximumResultCount);
+                new InspectionRequest(UrlTextbox.Text, InspectStringTextbox.Text, MaximumResultCount);
 
-            var result = await _documentInspectionService.Inspect(inspectionRequest);
+            var result = await _documentService.Inspect(inspectionRequest);
 
             if (result != null)
             {

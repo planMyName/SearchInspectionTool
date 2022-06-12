@@ -1,6 +1,4 @@
-﻿using Sit.Data.Abstractions;
-
-namespace Sit.Data
+﻿namespace Sit.Data
 {
     public class WebRepository : IWebRepository
     {

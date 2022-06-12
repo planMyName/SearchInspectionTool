@@ -1,5 +1,4 @@
 ﻿using Autofac;
-using Sit.Data.Abstractions;
 
 namespace Sit.Data.DependencyInjection
 {

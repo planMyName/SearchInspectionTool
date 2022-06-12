@@ -1,5 +1,5 @@
 ﻿using System.Windows;
-using Sit.Core.Abstractions;
+using Sit.App.Core.Services;
 
 namespace Sit.App
 {
@@ -8,9 +8,6 @@ namespace Sit.App
     /// </summary>
     public partial class App : Application
     {
-        public App()
-        {
-        }
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
@@ -21,8 +18,8 @@ namespace Sit.App
 
         private void WireUpMainWindow()
         {
-            var docInspectionService = Bootstrapper.Resolve<IDocumentInspectionService>();
-            var window = new MainWindow(docInspectionService);
+            var documentService = Bootstrapper.Resolve<IDocumentService>();
+            var window = new MainWindow(documentService);
             window.Closed += (obj, evtArg) => HandleWindowClose();
 
             window.Show();

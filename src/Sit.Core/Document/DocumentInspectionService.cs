@@ -1,5 +1,5 @@
-﻿using Sit.Core.Abstractions;
-using Sit.Data.Abstractions;
+﻿using Sit.Core.Document;
+using Sit.Data;
 
 namespace Sit.Core
 {

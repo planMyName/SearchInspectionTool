@@ -1,4 +1,4 @@
-﻿namespace Sit.Core.Abstractions
+﻿namespace Sit.Core.Document
 {
     public interface IDocumentInspectionService
     {

@@ -1,5 +1,5 @@
 ﻿using Autofac;
-using Sit.Core.Abstractions;
+using Sit.Core.Document;
 
 namespace Sit.Core.DependencyInjection
 {

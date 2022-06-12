@@ -18,4 +18,8 @@
     <ProjectReference Include="..\Sit.Data.Abstractions\Sit.Data.Abstractions.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="MappingProfiles\" />
+  </ItemGroup>
+
 </Project>
