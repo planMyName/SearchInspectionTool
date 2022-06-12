@@ -25,11 +25,11 @@ namespace Sit.App
             var inspectionRequest =
                 new InspectionRequest(UrlTextbox.Text, InspectStringTextbox.Text, MaximumResultCount);
 
-            var result = await _documentService.Inspect(inspectionRequest);
+            var result = await _documentService.InspectAsync(inspectionRequest);
 
             if (result != null)
             {
-                ResultTextBox.Text = result.resultCsv + " ||| " + result.snapshot;
+                ResultTextBox.Text = result.ResultCsv;
             }
         }
     }

@@ -15,10 +15,12 @@ public class DocumentService : IDocumentService
         _mapper = mapper;
     }
 
-    public async Task<InspectionResult> Inspect(InspectionRequest inspectionRequest)
+    public async Task<InspectionResult> InspectAsync(InspectionRequest inspectionRequest)
     {
-        var result = await _documentInspectionService.Inspect(_mapper.Map<InspectionRequestDetail>(inspectionRequest));
+        var result = await _documentInspectionService.InspectAsync(_mapper.Map<InspectionRequestDetail>(inspectionRequest));
 
-        return _mapper.Map<InspectionResult>(result);
+        var matchingResultsIndex = result.MatchTokens.Select(x => x.Index);
+
+        return new InspectionResult(string.Join(",", matchingResultsIndex));
     }
 }

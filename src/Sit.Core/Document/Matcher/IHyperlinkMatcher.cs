@@ -2,5 +2,6 @@
 
 public interface IHyperlinkMatcher
 {
-    public string GetNextMatch(int offset);
+    void SetContent(string content);
+    string GetNextMatch();
 }

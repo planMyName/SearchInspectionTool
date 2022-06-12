@@ -4,5 +4,5 @@ namespace Sit.App.Core.Services;
 
 public interface IDocumentService
 {
-    Task<InspectionResult> Inspect(InspectionRequest inspectionRequest);
+    Task<InspectionResult> InspectAsync(InspectionRequest inspectionRequest);
 }

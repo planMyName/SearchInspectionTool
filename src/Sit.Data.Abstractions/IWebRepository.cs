@@ -2,5 +2,5 @@
 
 public interface IWebRepository
 {
-    public Task<string> GetContentFrom(string location);
+    public Task<string> GetContentFromAsync(string location);
 }

@@ -2,5 +2,5 @@
 
 public interface IDocumentTokenizer
 {
-    ICollection<DocumentToken> TokenizeHyperlinks(string result);
+    ICollection<DocumentToken> TokenizeHyperlinks(string content, int maxTokenCount);
 }

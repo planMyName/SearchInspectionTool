@@ -9,6 +9,5 @@ public class AppToBusinessProfile : Profile
     public AppToBusinessProfile()
     {
         CreateMap<InspectionRequest, InspectionRequestDetail>();
-        CreateMap<InspectionResult, InspectionResultDetail>().ReverseMap();
     }
 }

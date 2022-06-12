@@ -9,7 +9,7 @@ public class WebRepository : IWebRepository
         _httpClientFactory = httpClientFactory;
     }
 
-    public async Task<string> GetContentFrom(string location)
+    public async Task<string> GetContentFromAsync(string location)
     {
         using var client = _httpClientFactory.CreateClient($"Client-{location}");
         var result = await client.GetAsync(new Uri(location));

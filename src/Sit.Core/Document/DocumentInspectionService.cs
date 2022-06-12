@@ -14,13 +14,16 @@ public class DocumentInspectionService : IDocumentInspectionService
     }
 
 
-    public async Task<InspectionResultDetail> Inspect(InspectionRequestDetail inspectionRequest)
+    public async Task<InspectionResultDetail> InspectAsync(InspectionRequestDetail inspectionRequest)
     {
-        var result = await _webRepository.GetContentFrom(inspectionRequest.TargetUrl);
+        var result = await _webRepository.GetContentFromAsync(inspectionRequest.TargetUrl);
 
-        var hyperlinks = _documentTokenizer.TokenizeHyperlinks(result);
+        var hyperlinks = _documentTokenizer.TokenizeHyperlinks(result, inspectionRequest.MaxResultCount);
+
+        var matchingHyperLinks =
+            hyperlinks.Where(link => link.ExtractedContent.Contains(inspectionRequest.InpectionText)).ToList();
 
 
-        return new InspectionResultDetail("1,2,3", result.Substring(0, 200));
+        return new InspectionResultDetail(matchingHyperLinks);
     }
 }

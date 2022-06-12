@@ -2,5 +2,5 @@
 
 public interface IDocumentInspectionService
 {
-    Task<InspectionResultDetail> Inspect(InspectionRequestDetail inspectionRequest);
+    Task<InspectionResultDetail> InspectAsync(InspectionRequestDetail inspectionRequest);
 }
