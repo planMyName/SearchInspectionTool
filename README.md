@@ -38,22 +38,22 @@ Execute Sit.App.exe
 - More Error catching
 - Inject Logging element
 - More Fault Tolerant Requests, like Poly
-- Test for Sit.App.Core
 
 
 # Design Overview
 
+Projects contain mainly the client logic
 - Sit.App
 - Sit.App.Core 
-Projects contain mainly the client logic
 
+Projects contain the business logic
 - Sit.Core
 - Sit.Core.Abstractions
-Projects contain the business logic
 
+Projects contain any data retrieve logic
 - Sit.Data
 - Sit.Data.Abstractions
-Projects contain any data retrieve logic
 
-- \tests
 Folder contain all the unit tests organized by {project name}.Tests using the same folder structure as the original project it is testing.
+- \tests
+
