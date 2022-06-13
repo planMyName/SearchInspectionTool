@@ -42,3 +42,18 @@ Execute Sit.App.exe
 
 
 # Design Overview
+
+- Sit.App
+- Sit.App.Core 
+Projects contain mainly the client logic
+
+- Sit.Core
+- Sit.Core.Abstractions
+Projects contain the business logic
+
+- Sit.Data
+- Sit.Data.Abstractions
+Projects contain any data retrieve logic
+
+- \tests
+Folder contain all the unit tests organized by {project name}.Tests using the same folder structure as the original project it is testing.

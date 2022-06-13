@@ -8,5 +8,6 @@
     &lt;TestId&gt;NUnit3x::EA3E821D-BA9C-417F-9BDC-D2289430F3EA::net6.0::Sit.Core.Tests.Document.DocumentTokenizer_Tests.TokenizeHyperlinks_TwoLinks_ExpectTwoToken&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::EA3E821D-BA9C-417F-9BDC-D2289430F3EA::net6.0::Sit.Core.Tests.Document.DocumentTokenizer_Tests.TokenizeHyperlinks_TwoLinksButOnlyAskForMaxOne_ExpectOneToken&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::EA3E821D-BA9C-417F-9BDC-D2289430F3EA::net6.0::Sit.Core.Tests.Document.DocumentTokenizer_Tests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::EAF3AC35-E2EA-4E82-A22A-A0F3117B4C4E::net6.0::Sit.App.Core.Tests.Services.DocumentService_Tests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
